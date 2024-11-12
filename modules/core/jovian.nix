@@ -8,7 +8,11 @@
       desktopSession = "gnome";
       user = "${username}";
     };
-    steamos.useSteamOSConfig = true;
+    steamos = {
+      enableAutoMountUdevRules = true;
+      enableMesaPatches = true;
+      useSteamOSConfig = false;
+    };
     hardware.has.amd.gpu = true;
   };
   services.handheld-daemon.enable = true;
